@@ -1,0 +1,6 @@
+framework module Pods_docappGlobal {
+  umbrella header "Pods-docappGlobal-umbrella.h"
+
+  export *
+  module * { export * }
+}
