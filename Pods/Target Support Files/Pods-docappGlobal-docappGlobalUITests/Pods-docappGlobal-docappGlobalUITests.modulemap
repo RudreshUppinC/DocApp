@@ -1,0 +1,6 @@
+framework module Pods_docappGlobal_docappGlobalUITests {
+  umbrella header "Pods-docappGlobal-docappGlobalUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

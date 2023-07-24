@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalenderView" customModule="docappGlobal" customModuleProvider="target">
+            <connections>
+                <outlet property="calenderRefView" destination="GK9-TE-fN4" id="Cn9-uO-m20"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CalenderView" id="gRB-EE-lAJ" customClass="CalenderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbQ-T5-SDu">
+                    <rect key="frame" x="30" y="556" width="315" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-jN-Wa9">
+                            <rect key="frame" x="5" y="10" width="305" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXy-i2-3S6">
+                                    <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="40"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelBtnAct:" destination="-1" eventType="touchUpInside" id="OHu-nQ-iBr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGU-ba-9cl">
+                                    <rect key="frame" x="162.66666666666663" y="0.0" width="142.33333333333337" height="40"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Okay">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="okayBtnAct:" destination="-1" eventType="touchUpInside" id="I0W-WD-CVx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ocb-jN-Wa9" secondAttribute="trailing" constant="5" id="CKY-Z3-7Gg"/>
+                        <constraint firstAttribute="height" constant="60" id="UzL-oI-FuS"/>
+                        <constraint firstAttribute="bottom" secondItem="Ocb-jN-Wa9" secondAttribute="bottom" constant="10" id="jMK-kf-bmW"/>
+                        <constraint firstItem="Ocb-jN-Wa9" firstAttribute="leading" secondItem="dbQ-T5-SDu" secondAttribute="leading" constant="5" id="kA3-YX-7fq"/>
+                        <constraint firstItem="Ocb-jN-Wa9" firstAttribute="top" secondItem="dbQ-T5-SDu" secondAttribute="top" constant="10" id="vOS-wT-cyT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GK9-TE-fN4">
+                    <rect key="frame" x="30" y="256" width="315" height="300"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="GeO-Eu-fGn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dbQ-T5-SDu" firstAttribute="leading" secondItem="gRB-EE-lAJ" secondAttribute="leading" constant="30" id="8zn-Mv-Lif"/>
+                <constraint firstItem="dbQ-T5-SDu" firstAttribute="top" secondItem="GK9-TE-fN4" secondAttribute="bottom" id="DXG-Fv-WDc"/>
+                <constraint firstAttribute="trailing" secondItem="GK9-TE-fN4" secondAttribute="trailing" constant="30" id="afE-7k-wfj"/>
+                <constraint firstItem="GK9-TE-fN4" firstAttribute="leading" secondItem="gRB-EE-lAJ" secondAttribute="leading" constant="30" id="oEx-6i-QTP"/>
+                <constraint firstAttribute="trailing" secondItem="dbQ-T5-SDu" secondAttribute="trailing" constant="30" id="r8L-Yr-UH4"/>
+                <constraint firstItem="GK9-TE-fN4" firstAttribute="centerY" secondItem="gRB-EE-lAJ" secondAttribute="centerY" id="wUK-iw-FQJ"/>
+            </constraints>
+            <point key="canvasLocation" x="196" y="-107.14285714285715"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
